@@ -12,7 +12,8 @@ question2_response = StringVar()
 def load_questions():
     global question1_response
     try:
-        # Replace 'your_api_url' with the provided URL
+        # Replace 'api_url' with something like 'https://forms.office.com/formapi/api/some_guid/users/some_guid/light/runtimeFormsWithResponses(\'some_big_char_string\')?$expand=questions($expand=choices)&$top=1'
+        # make sure to escape the single ticks around the big char sting
         api_url = ''
         response = requests.get(api_url)
         data = response.json()
